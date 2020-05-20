@@ -4,13 +4,13 @@ import { ADD_PRODUCT, REMOVE_PRODUCT } from "./types";
 export const addProduct = (product) => {
     return {
         type: ADD_PRODUCT,
-        payload: item
+        payload: product
     };
 };
 
-export const removeProduct = (productId) => {
+export const removeProduct = (product) => {
     return {
         type: REMOVE_PRODUCT,
-        payload: productId
+        payload: product
     };
 };

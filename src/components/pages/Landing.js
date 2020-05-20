@@ -6,7 +6,7 @@ class Landing extends React.Component {
 
     render() {
         return (
-            <div>
+            <div onClick={()=>{console.log(this.props)}}>
                 <Shop />
             </div>
         )
