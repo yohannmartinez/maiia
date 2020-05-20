@@ -9,9 +9,16 @@ import './App.css';
 //pages
 import Landing from "./components/pages/Landing"
 
+
+
 class App extends React.Component {
+
   componentDidMount() {
-    axios.get("https://jsonplaceholder.typicode.com/photos").then((res => store.dispatch(setProducts(res.data)))).catch(err=>console.log(err))
+    axios.get("https://jsonplaceholder.typicode.com/photos")
+      .then((res => {
+        store.dispatch(setProducts(res.data));
+      }))
+      .catch(err => console.log(err))
   }
 
   render() {
@@ -22,6 +29,7 @@ class App extends React.Component {
           <div className="App">
             <Switch>
               <Route exact path="/" component={Landing} />
+              <Route exact path="*" component={Landing} />
             </Switch>
           </div>
         </Router>

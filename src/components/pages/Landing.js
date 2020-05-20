@@ -1,29 +1,19 @@
 import React from "react"
 import { connect } from "react-redux";
+import Shop from "../organisms/Shop"
 
 class Landing extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-
-        }
-    }
-
-    componentDidMount(){
-        console.log("props", this.props)
-    }
 
     render() {
         return (
             <div>
-                coucou
+                <Shop />
             </div>
         )
     }
 }
 
 function mapStateToProps(state) {
-    console.log(state)
     return {
         cart: state.cart,
     };
