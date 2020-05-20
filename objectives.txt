@@ -1,0 +1,37 @@
+common commits :
+
+create app
+create store
+show elements shop 15 en 15
+create function store to go page
+create function store add cart
+create function store remove cart
+show full length of cart
+show cart list
+style
+responsive
+
+
+
+store states : 
+
+pageIndex :number //number of the current page
+cart : array // cart with products of the client
+products: array // products of the e-shop
+
+
+
+
+store functions : 
+getProductsList(pageIndex){
+	take page index to return a list of 15 products
+	condition: if number return undefined return last 15
+}
+
+addProduct(productIndex) {
+	add the product to the cart with the productIndex
+}
+
+removeProduct(productIndex){
+	remove the product to the cart with the productIndex
+}
