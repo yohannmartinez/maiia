@@ -1,4 +1,7 @@
 export const ADD_PRODUCT = "ADD_PRODUCT";
 export const REMOVE_PRODUCT = "REMOVE_PRODUCT";
+export const SET_CART_OPEN = "SET_CART_OPEN";
+export const SET_CART_CLOSE = "SET_CART_CLOSE";
 
 export const SET_PRODUCTS = "SET_PRODUCTS";
+export const HANDLE_SEARCH = "HANDLE_SEARCH";

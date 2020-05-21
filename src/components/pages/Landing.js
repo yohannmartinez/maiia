@@ -1,12 +1,17 @@
 import React from "react"
 import { connect } from "react-redux";
+
+
+//pages
+import Presentation from "../organisms/Presentation"
 import Shop from "../organisms/Shop"
 
 class Landing extends React.Component {
 
     render() {
         return (
-            <div onClick={()=>{console.log(this.props)}}>
+            <div>
+                <Presentation/>
                 <Shop />
             </div>
         )

@@ -1,7 +1,8 @@
-import { ADD_PRODUCT, REMOVE_PRODUCT } from "../actions/types";
+import { ADD_PRODUCT, REMOVE_PRODUCT, SET_CART_OPEN, SET_CART_CLOSE } from "../actions/types";
 
 const initialState = {
     cart: [],
+    isOpen: false,
 };
 
 export default function (state = initialState, action) {
@@ -13,10 +14,10 @@ export default function (state = initialState, action) {
                     cart: [...state.cart, action.payload]
                 };
             } else {
-                return{
+                return {
                     ...state
                 }
-            }
+            };
         case REMOVE_PRODUCT:
             let cartCopy = [...state.cart];
             cartCopy.forEach((item, index) => { if (item.id === action.payload.id) cartCopy.splice(index, 1) })
@@ -24,6 +25,18 @@ export default function (state = initialState, action) {
                 ...state,
                 cart: cartCopy,
             };
+
+        case SET_CART_OPEN:
+            return {
+                ...state,
+                isOpen: action.payload
+            };
+
+        case SET_CART_CLOSE:
+            return {
+                ...state,
+                isOpen: action.payload
+            }
         default:
             return state;
     }

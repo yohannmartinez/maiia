@@ -1,0 +1,65 @@
+.Presentation_container{
+    width:100%;
+    min-height:100vh;
+}
+
+.Presentation_navbar{
+    height:80px;
+    padding:0 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Presentation_logo{
+    width:10em;
+}
+
+.Presentation_cartContainer{
+    width:3em;
+    height:3em;
+    position: relative;
+    cursor: pointer;
+}
+
+.Presentation_cartlength{
+    position: absolute;
+    right:0;
+    top:0;
+    transform: translate(25%,-25%);
+    height:1.5em;
+    width:1.5em;
+    background-color: #FF8970;
+    border-radius: 50%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    color:white;
+    font-weight: 800;
+}
+
+.Presentation_FlexContainer{
+    height:calc(100vh - 80px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 1em;
+}
+
+.Presentation_LeftContainer{
+    
+    width:40%;
+}
+
+.Presentation_rightContainer{
+    height:100%;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    padding:3em 1em 3em 3em;
+}
+
+.Presentation_illustration{
+    width:70%;
+}

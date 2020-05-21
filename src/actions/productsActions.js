@@ -1,10 +1,16 @@
-import { SET_PRODUCTS } from "./types";
+import { SET_PRODUCTS, HANDLE_SEARCH } from "./types";
 
 // Set current page with page parameters
 export const setProducts = (products) => {
-    console.log('products are', products)
     return {
         type: SET_PRODUCTS,
         payload: products
+    };
+};
+
+export const handleSearch = (search) => {
+    return {
+        type: HANDLE_SEARCH,
+        payload: search,
     };
 };

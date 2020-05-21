@@ -5,9 +5,6 @@ import { addProduct, removeProduct } from "../../actions/cartActions"
 
 class ProductList extends React.Component {
 
-    componentDidMount() {
-        console.log("props are", this.props)
-    }
 
     addProductToCart(productIndex) {
         this.props.addProduct(this.props.products[productIndex])

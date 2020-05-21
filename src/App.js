@@ -4,7 +4,7 @@ import { Provider } from "react-redux";
 import store from "./store";
 import { setProducts } from "./actions/productsActions";
 import axios from "axios"
-import './App.css';
+import './App.scss';
 
 //pages
 import Landing from "./components/pages/Landing"
@@ -27,10 +27,12 @@ class App extends React.Component {
 
         <Router>
           <div className="App">
-            <Switch>
-              <Route exact path="/" component={Landing} />
-              <Route exact path="*" component={Landing} />
-            </Switch>
+            <div className="content">
+              <Switch>
+                <Route exact path="/" component={Landing} />
+                <Route exact path="*" component={Landing} />
+              </Switch>
+            </div>
           </div>
         </Router>
 
