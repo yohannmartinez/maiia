@@ -29,5 +29,11 @@
     padding:1em 0;
     color:#FF8970;
     font-weight: 900;
+    text-align: center;
+}
 
+@media(max-width:400px) {
+    .SearchBar_input{
+        width:80%;
+    }
 }

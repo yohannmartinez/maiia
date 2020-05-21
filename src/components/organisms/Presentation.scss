@@ -76,7 +76,6 @@
     .Presentation_FlexContainer{
         display: block;
         height:auto;
-
     }
     .Presentation_LeftContainer{
         width:100%;
@@ -97,6 +96,7 @@
 @media(max-width : 1000px ) and (min-width:600px){
     .Presentation_FlexContainer{
         display: block;
+        height:auto;
     }
     .Presentation_LeftContainer{
         width:100%;

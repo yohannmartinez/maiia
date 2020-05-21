@@ -43,6 +43,7 @@ class Cart extends React.Component {
 
                 {this.props.isOpen &&
                     <div className="Cart_cartBackground">
+                        <div className="Cart_closeZone" onClick={this.closeCart}></div>
                         <div className="Cart_cartContent">
                             <span className="material-icons Cart_closeButton" onClick={this.closeCart}>close</span>
                             {this.props.cart.length === 0 &&
