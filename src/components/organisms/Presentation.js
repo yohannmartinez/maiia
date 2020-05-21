@@ -13,9 +13,9 @@ class Presentation extends React.Component {
         return (
             <div className="Presentation_container">
                 <div className="Presentation_navbar">
-                    <img src={Logo} className="Presentation_logo"/>
+                    <img src={Logo} className="Presentation_logo" alt="maiia logo"/>
                     <div className="Presentation_cartContainer">
-                        <img src={Cart} className="Presentation_cartIcon"/>
+                        <img src={Cart} className="Presentation_cartIcon" alt="maiia cart"/>
                         {this.props.cart.length >= 1 &&
                             <div className="Presentation_cartlength">{this.props.cart.length}</div>
                         }
@@ -35,7 +35,7 @@ class Presentation extends React.Component {
                         <button className="global_button">Voir les produit !</button>
                     </div>
                     <div className="Presentation_rightContainer">
-                        <img src={Illustration} className="Presentation_illustration"/>
+                        <img src={Illustration} className="Presentation_illustration" alt="maiia, leader de l'e-commerce "/>
                     </div>
                 </div>
 

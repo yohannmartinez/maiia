@@ -1,0 +1,41 @@
+.ProductList_PageNavContainer{
+    display:flex;
+    padding:3em 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.ProductList_NavText{
+    font-weight: 700;
+    font-size: 1em;
+    color:#FF8970
+}
+
+.ProductList_NavButton{
+    border-radius: 3px;
+    height:3em;
+    width:3em;
+    color:white;
+    background-color: #FF8970;
+    border:none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;
+    margin:0 1em 0 1em;
+    transition: 0.5s;
+    font-weight: 900;
+}
+
+.ProductList_NavButton:disabled{
+    background-color: rgb(248, 167, 151);
+}
+
+.ProductList_NavButton:hover:disabled{
+    background-color: rgb(248, 167, 151);
+}
+
+.ProductList_NavButton:hover{
+   
+    background-color: rgb(235, 101, 75);
+}

@@ -35,3 +35,8 @@ addProduct(productIndex) {
 removeProduct(productIndex){
 	remove the product to the cart with the productIndex
 }
+
+
+to do :
+cart 
+style products item in ProductsList
