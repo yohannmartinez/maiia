@@ -11,7 +11,7 @@ const SearchBar = (props) => {
     }
 
     return (
-        <div className="SearchBar_container">
+        <div className="SearchBar_container" id="Products">
             <input value={props.search} onChange={handleChange} placeholder="Ecrivez votre recherche..." className="SearchBar_input" />
             {props.search !== "" &&
                 <span className="SearchBar_result">{props.products.length} resultats avec la recherche " <span style={{color:"#6EC3C4"}}>{props.search} </span>"</span>

@@ -2,6 +2,7 @@ import React from "react"
 import { connect } from "react-redux";
 import ProductList from "../molecules/ProductList"
 import SearchBar from "../molecules/SearchBar"
+import Cart from '../molecules/Cart'
 import { withRouter } from "react-router-dom";
 
 class Shop extends React.Component {
@@ -73,6 +74,7 @@ class Shop extends React.Component {
             <React.Fragment>
                 <SearchBar />
                 <ProductList products={this.state.products} page={this.state.page} maxPage={this.state.maxPage} lastPage={this.lastPage} firstPage={this.firstPage} nextPage={this.nextPage} previousPage={this.previousPage} />
+                <Cart />
             </React.Fragment>
         )
     }

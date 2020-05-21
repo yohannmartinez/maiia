@@ -19,16 +19,17 @@ class ProductList extends React.Component {
             <React.Fragment>
                 {this.props.products &&
                     <div>
+                        <div className="ProductList_ProductsContainer">
+                            {this.props.products.map((product, index) => (
+                                <div key={product.id + index} className="ProductList_Product">
+                                    <img src={product.thumbnailUrl} className="ProductList_ProductThumbnail"/>
+                                    <h1 className="ProductList_ProductTitle">{product.title}</h1>
 
-                        {this.props.products.map((product, index) => (
-                            <div key={product.id + index} >
-                                <img src={product.thumbnailUrl} />
-                                {product.title}
-
-                                <button onClick={() => { this.addProductToCart(index) }}>add</button>
-                                {/* <button onClick={() => { this.removeProductToCart(index) }}>remove</button> */}
-                            </div>
-                        ))}
+                                    <button className="ProductList_ProductButton" onClick={() => { this.addProductToCart(index) }}>Ajouter au Panier</button>
+                                    {/* <button onClick={() => { this.removeProductToCart(index) }}>remove</button> */}
+                                </div>
+                            ))}
+                        </div>
 
                         <div className="ProductList_PageNavContainer">
                             <button className="ProductList_NavButton" onClick={this.props.previousPage} disabled={Number(this.props.page) === 1}><span className="material-icons">arrow_left</span></button>

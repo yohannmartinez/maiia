@@ -1,7 +1,7 @@
 import React from "react"
 import './Presentation.scss'
 import { connect } from 'react-redux'
-
+import {setCartOpen} from '../../actions/cartActions'
 //images
 import Logo from '../../assets/global/logo.png'
 import Cart from '../../assets/global/cart.svg'
@@ -10,14 +10,15 @@ import Illustration from '../../assets/Landing/illustrationOne.svg'
 class Presentation extends React.Component {
 
     render() {
+        console.log(this.props)
         return (
             <div className="Presentation_container">
                 <div className="Presentation_navbar">
                     <img src={Logo} className="Presentation_logo" alt="maiia logo"/>
-                    <div className="Presentation_cartContainer">
+                    <div className="Presentation_cartContainer" onClick={this.props.setCartOpen}>
                         <img src={Cart} className="Presentation_cartIcon" alt="maiia cart"/>
                         {this.props.cart.length >= 1 &&
-                            <div className="Presentation_cartlength">{this.props.cart.length}</div>
+                            <div  className="Presentation_cartlength">{this.props.cart.length}</div>
                         }
                     </div>
                 </div>
@@ -32,7 +33,7 @@ class Presentation extends React.Component {
                             vêtements qui sortent de nos locaux sont testés du tissu aux coutures pour faire en sortent 
                             qu'il dure le plus looongtemps possible ! <b>Quoi de mieux pour la planète et pour vous !</b>
                         </p>
-                        <button className="global_button">Voir les produit !</button>
+                        <button className="global_button" onClick={()=>{document.getElementById('Products').scrollIntoView();}}>Voir les produit !</button>
                     </div>
                     <div className="Presentation_rightContainer">
                         <img src={Illustration} className="Presentation_illustration" alt="maiia, leader de l'e-commerce "/>
@@ -50,4 +51,6 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps, null)(Presentation);
+export default connect(mapStateToProps, {
+    setCartOpen
+})(Presentation);
