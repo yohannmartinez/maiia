@@ -6,7 +6,6 @@ const initialState = {
 };
 
 export default function (state = initialState, action) {
-    console.log(action)
     switch (action.type) {
         case ADD_PRODUCT:
             if (state.cart.filter(item => item.id === action.payload.id).length === 0) {

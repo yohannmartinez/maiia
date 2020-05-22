@@ -10,7 +10,6 @@ import Illustration from '../../assets/Landing/illustrationOne.svg'
 class Presentation extends React.Component {
 
     render() {
-        console.log(this.props)
         return (
             <div className="Presentation_container">
                 <div className="Presentation_navbar">

@@ -34,10 +34,9 @@ class Cart extends React.Component {
     }
 
     render() {
-        console.log(this.props)
         return (
             <div className="Cart_Container" >
-                <img src={CartIcon} className="Cart_cartIcon" onClick={this.openCart} />
+                <img src={CartIcon} className="Cart_cartIcon" onClick={this.openCart} alt="maiia cart"/>
 
                 <div className="Cart_cartLength">{this.props.cart.length}</div>
 
@@ -48,7 +47,7 @@ class Cart extends React.Component {
                             <span className="material-icons Cart_closeButton" onClick={this.closeCart}>close</span>
                             {this.props.cart.length === 0 &&
                                 <React.Fragment>
-                                    <img src={Illustration} className="Cart_illustration" />
+                                    <img src={Illustration} className="Cart_illustration" alt="maiia no products"/>
                                     <h1 className="Cart_empty">Votre panier est vide...</h1>
                                 </React.Fragment>
                             }
@@ -57,12 +56,12 @@ class Cart extends React.Component {
                                     <h1 className="Cart_productsTitle">Panier ({this.props.cart.length} Produits)</h1>
 
                                     {this.props.cart.map((product,index) => (
-                                        <div className="Cart_product" key={"cart",index}>
+                                        <div className="Cart_product" key={"cart" + index}>
                                             <div>
                                                 <h1 className="Cart_productTitle">{product.title}</h1>
                                                 <button className="Cart_productButton" onClick={() => { this.props.removeProduct(product) }}>Retirer du panier</button>
                                             </div>
-                                            <img src={product.thumbnailUrl} className="Cart_productThumbnail" />
+                                            <img src={product.thumbnailUrl} className="Cart_productThumbnail" alt={`maiia product ${product.title}`}/>
                                         </div>
                                     ))}
                                 </div >

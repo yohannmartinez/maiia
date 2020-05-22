@@ -22,7 +22,7 @@ class ProductList extends React.Component {
                         <div className="ProductList_ProductsContainer">
                             {this.props.products.map((product, index) => (
                                 <div key={product.id + index} className="ProductList_Product">
-                                    <img src={product.thumbnailUrl} className="ProductList_ProductThumbnail"/>
+                                    <img src={product.thumbnailUrl} className="ProductList_ProductThumbnail" alt={`maiia product ${product.title}`}/>
                                     <h1 className="ProductList_ProductTitle">{product.title}</h1>
 
                                     <button className="ProductList_ProductButton" onClick={() => { this.addProductToCart(index) }}>Ajouter au Panier</button>
